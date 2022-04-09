@@ -1,5 +1,4 @@
 import type { GetStaticProps } from "next";
-import Head from "next/head";
 
 import { Date } from "@/components/date";
 import { Layout } from "@/components/layout";
@@ -30,10 +29,10 @@ const getNav = (id: string, categoryId: string, postIds: string[]) => {
 };
 
 const PostPage: React.FC<PostPageProps> = ({ postData, categoryId }) => (
-  <Layout {...getNav(postData.id, categoryId, postData.category.postIds)}>
-    <Head>
-      <title>{postData.title}</title>
-    </Head>
+  <Layout
+    {...getNav(postData.id, categoryId, postData.category.postIds)}
+    title={postData.title}
+  >
     <article>
       <h1 className={utilStyles.headingXl}>{postData.title}</h1>
       <div className={utilStyles.lightText}>

@@ -1,9 +1,8 @@
 import type { GetStaticProps } from "next";
-import Head from "next/head";
 import Link from "next/link";
 
 import { Date } from "@/components/date";
-import { Layout, siteTitle } from "@/components/layout";
+import { Layout } from "@/components/layout";
 import { getAllCategoryData } from "@/lib/posts";
 import utilStyles from "@/styles/utils.module.css";
 import type { Category } from "@/types/post";
@@ -13,10 +12,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ categories }) => (
-  <Layout home>
-    <Head>
-      <title>{siteTitle}</title>
-    </Head>
+  <Layout home title="Home">
     <section className={utilStyles.headingMd}>
       <h2 className={utilStyles.headingLg}>
         Welcome to the ADS Games tutorial page.
