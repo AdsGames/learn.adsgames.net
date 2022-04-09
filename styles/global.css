@@ -76,3 +76,7 @@ nav a:hover {
 nav:hover ~ #content-container .sticky h1 {
   padding: 27px 20px 13px 20px;
 }
+
+.hljs {
+  font-size: 14px;
+}
