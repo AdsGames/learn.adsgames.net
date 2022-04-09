@@ -46,5 +46,6 @@
     "react/jsx-no-literals": "off",
 
     "jsx-a11y/anchor-is-valid": "off"
-  }
+  },
+  "ignorePatterns": ["next-env.d.ts", "next.config.js"]
 }
