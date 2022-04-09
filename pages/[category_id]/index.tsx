@@ -1,5 +1,4 @@
 import type { GetStaticProps } from "next";
-import Head from "next/head";
 import Link from "next/link";
 
 import { Date } from "@/components/date";
@@ -19,10 +18,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
   categoryId,
   meta,
 }) => (
-  <Layout>
-    <Head>
-      <title>{meta.title}</title>
-    </Head>
+  <Layout title={meta.title}>
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h1 className={utilStyles.headingXl}>{meta.title}</h1>
       <h2 className={utilStyles.headingLg}>Sections</h2>

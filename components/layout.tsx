@@ -8,13 +8,14 @@ import styles from "./layout.module.css";
 import { Nav } from "./nav";
 
 const name = "Learn on A.D.S. Games";
-export const siteTitle = "learn.adsgames.net";
+const siteTitle = "learn.adsgames.net";
 
 interface LayoutProps {
   children: React.ReactNode;
   home?: boolean;
   nextPage?: string | null;
   prevPage?: string | null;
+  title: string;
 }
 
 export const Layout: React.FC<LayoutProps> = ({
@@ -22,23 +23,14 @@ export const Layout: React.FC<LayoutProps> = ({
   home,
   nextPage,
   prevPage,
+  title,
 }) => (
   <>
     <div className={styles.container}>
       <Head>
-        <link href="/favicon.ico" rel="icon" />
-        <meta
-          content="Learn how to build a personal website using Next.js"
-          name="description"
-        />
-        <meta
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle,
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          property="og:image"
-        />
+        <meta content="Learn on A.D.S. Games" name="description" />
         <meta content={siteTitle} name="og:title" />
-        <meta content="summary_large_image" name="twitter:card" />
+        <title>{`${title} - ${siteTitle}`}</title>
       </Head>
       <Nav />
       <header className={styles.header}>
