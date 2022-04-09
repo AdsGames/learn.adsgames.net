@@ -30,6 +30,31 @@
   background-position: -450px 0;
 }
 
+.menuHome:hover {
+  background-position: -250px -180px;
+}
+.menuGames:hover {
+  background-position: -150px -180px;
+}
+.menuAssets:hover {
+  background-position: -100px -180px;
+}
+.menuLearn:hover {
+  background-position: -300px -180px;
+}
+.menuMembers:hover {
+  background-position: -400px -180px;
+}
+.menuLinks:hover {
+  background-position: -350px -180px;
+}
+.menuAbout:hover {
+  background-position: -450px -180px;
+}
+.menuContact:hover {
+  background-position: -50px -180px;
+}
+
 .navContainer {
   width: 560px;
   display: block;
