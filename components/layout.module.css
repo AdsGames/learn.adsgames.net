@@ -1,0 +1,23 @@
+.container {
+  max-width: 48rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 4rem auto 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.3);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backToHome {
+  margin: 2rem 0;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+}

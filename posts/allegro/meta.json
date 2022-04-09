@@ -1,0 +1,16 @@
+{
+  "title": "Learn Allegro",
+  "author": "Danny Van Stemp",
+  "date": "2013-07-19",
+  "postIds": [
+    "what_is_allegro",
+    "installing_allegro",
+    "first-allegro-program",
+    "graphics",
+    "bitmaps",
+    "mouse",
+    "sprites",
+    "sound",
+    "window_title"
+  ]
+}

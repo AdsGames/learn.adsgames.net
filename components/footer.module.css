@@ -1,0 +1,50 @@
+.footerText {
+  font-size: 0.9em;
+  margin: 5px 0px;
+  color: #ffffff;
+}
+
+.footerIcons {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerIconLinks {
+  list-style-type: none;
+  display: inline-block;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.footerIcons li {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-position: center center;
+}
+
+.footerFacebook {
+  background: url("/images/adsgames_ui.png") 0 -50px !important;
+}
+.footerTwitter {
+  background: url("/images/adsgames_ui.png") -128px -50px !important;
+}
+.footerReddit {
+  background: url("/images/adsgames_ui.png") -64px -50px !important;
+}
+.footerGooglePlus {
+  background: url("/images/adsgames_ui.png") -32px -50px !important;
+}
+.footerRss {
+  background: url("/images/adsgames_ui.png") -96px -50px !important;
+}
+
+.footer {
+  background-color: #3498db;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto;
+}

@@ -1,0 +1,50 @@
+.menuHome {
+  background-position: -250px 0;
+}
+
+.menuGames {
+  background-position: -150px 0;
+}
+
+.menuContact {
+  background-position: -50px 0;
+}
+
+.menuAssets {
+  background-position: -100px 0;
+}
+
+.menuLearn {
+  background-position: -300px 0;
+}
+
+.menuMembers {
+  background-position: -400px 0;
+}
+
+.menuLinks {
+  background-position: -350px 0;
+}
+
+.menuAbout {
+  background-position: -450px 0;
+}
+
+.navContainer {
+  width: 560px;
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+
+.navContainer:hover {
+  height: 70px;
+}
+
+.navIcon {
+  height: 50px;
+  background-image: url("https://adsgames.net/img/adsgames_ui.png");
+  width: 50px;
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Learn C++",
+  "author": "Danny Van Stemp",
+  "date": "2013-07-19",
+  "postIds": [
+    "history",
+    "getting_started",
+    "hello_world",
+    "input_output",
+    "variables",
+    "logic"
+  ]
+}
