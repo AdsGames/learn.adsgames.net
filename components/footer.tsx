@@ -1,34 +1,39 @@
 import styles from "./footer.module.css";
 
+const FOOTER_ICONS = [
+  {
+    title: "Facebook",
+    link: "https://www.facebook.com/adsgames",
+    className: styles.footerFacebook,
+  },
+  {
+    title: "Twitter",
+    link: "https://twitter.com/adsgames",
+    className: styles.footerTwitter,
+  },
+  {
+    title: "Reddit",
+    link: "https://old.reddit.com/r/AdsGames",
+    className: styles.footerReddit,
+  },
+  {
+    title: "Github",
+    link: "https://www.github.com/adsgames",
+    className: styles.footerGithub,
+  },
+] as const;
+
 export const Footer: React.FC = () => (
   <footer className={styles.footer}>
     <p className={styles.footerText}>
       Copyright &#169; {new Date().getFullYear()} A.D.S. Games
     </p>
     <div className={styles.footerIcons}>
-      <a href="https://facebook.com/adsgames" rel="noreferrer" target="_blank">
-        <div className={styles.footerFacebook} title="Facebook" />
-      </a>
-      <a href="https://twitter.com/adsGames" rel="noreferrer" target="_blank">
-        <div className={styles.footerTwitter} title="Twitter" />
-      </a>
-      <a href="https://reddit.com/r/adsgames" rel="noreferrer" target="_blank">
-        <div className={styles.footerReddit} title="Reddit" />
-      </a>
-      <a
-        href="https://plus.google.com/+AdsgamesNet"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <div className={styles.footerGooglePlus} title="Google Plus" />
-      </a>
-      <a
-        href="https://adsgames.net/xml/rssFeed.xml"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <div className={styles.footerRss} title="RSS" />
-      </a>
+      {FOOTER_ICONS.map(({ title, link, className }) => (
+        <a href={link} key={title} rel="noreferrer" target="_blank">
+          <div className={className} title={title} />
+        </a>
+      ))}
     </div>
   </footer>
 );

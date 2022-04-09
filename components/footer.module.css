@@ -25,17 +25,17 @@
 }
 
 .footerFacebook {
-  background: url("/images/adsgames_ui.png") 0 -50px !important;
+  background: url("/images/ui.png") 0 -50px !important;
 }
+
 .footerTwitter {
-  background: url("/images/adsgames_ui.png") -128px -50px !important;
+  background: url("/images/ui.png") -32px -50px !important;
 }
+
 .footerReddit {
-  background: url("/images/adsgames_ui.png") -64px -50px !important;
+  background: url("/images/ui.png") -64px -50px !important;
 }
-.footerGooglePlus {
-  background: url("/images/adsgames_ui.png") -32px -50px !important;
-}
-.footerRss {
-  background: url("/images/adsgames_ui.png") -96px -50px !important;
+
+.footerGithub {
+  background: url("/images/ui.png") -96px -50px !important;
 }
