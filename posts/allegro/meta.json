@@ -1,7 +1,8 @@
 {
-  "title": "Learn Allegro",
+  "title": "Learn Allegro 4",
   "author": "Danny Van Stemp",
   "date": "2013-07-19",
+  "description": "Learn to use Allegro 4 in your own games. This is a tutorial for the Allegro 4 programming language. It is a great way to learn how to program in C++.",
   "postIds": [
     "what_is_allegro",
     "installing_allegro",

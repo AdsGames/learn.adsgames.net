@@ -2,6 +2,7 @@
   "title": "Learn C++",
   "author": "Danny Van Stemp",
   "date": "2013-07-19",
+  "description": "C++ tutorial for beginners",
   "postIds": [
     "history",
     "getting_started",

@@ -1,5 +1,6 @@
 export interface CategoryMeta {
   title: string;
+  description: string;
   author: string;
   date: string;
   postIds: string[];
@@ -13,6 +14,7 @@ export interface Category {
 
 export interface PostFM {
   title: string;
+  description: string;
 }
 
 export interface PostSummary extends PostFM {

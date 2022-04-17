@@ -12,7 +12,7 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ categories }) => (
-  <Layout home title="Home">
+  <Layout description="Learn on A.D.S. Games" home title="Home">
     <section className={utilStyles.headingMd}>
       <h2 className={utilStyles.headingLg}>
         Welcome to the ADS Games tutorial page.

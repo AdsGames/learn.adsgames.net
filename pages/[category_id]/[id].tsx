@@ -30,6 +30,7 @@ const getNav = (id: string, categoryId: string, postIds: string[]) => {
 
 const PostPage: React.FC<PostPageProps> = ({ postData, categoryId }) => (
   <Layout
+    description={postData.category.description}
     {...getNav(postData.id, categoryId, postData.category.postIds)}
     title={postData.title}
   >
