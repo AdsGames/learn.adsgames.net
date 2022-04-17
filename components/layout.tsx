@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import utilStyles from "@/styles/utils.module.css";
 
@@ -16,6 +17,7 @@ interface LayoutProps {
   nextPage?: string | null;
   prevPage?: string | null;
   title: string;
+  description: string;
 }
 
 export const Layout: React.FC<LayoutProps> = ({
@@ -24,53 +26,62 @@ export const Layout: React.FC<LayoutProps> = ({
   nextPage,
   prevPage,
   title,
-}) => (
-  <>
-    <div className={styles.container}>
-      <Head>
-        <meta content="Learn on A.D.S. Games" name="description" />
-        <meta content={siteTitle} name="og:title" />
-        <title>{`${title} - ${siteTitle}`}</title>
-      </Head>
-      <Nav />
-      <header className={styles.header}>
-        {home ? (
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
-        ) : (
-          <h2 className={utilStyles.headingMd}>
-            <Link href="/">
-              <a className={utilStyles.colorInherit}>{name}</a>
-            </Link>
-          </h2>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (nextPage || prevPage) && (
-        <div className={styles.navigator}>
-          {prevPage ? (
-            <Link href={prevPage}>
-              <a>← Prev</a>
-            </Link>
+  description,
+}) => {
+  const { asPath } = useRouter();
+
+  return (
+    <>
+      <div className={styles.container}>
+        <Head>
+          <meta content={description} name="description" />
+          <meta content={siteTitle} name="og:title" />
+          <title>{`${title} - ${siteTitle}`}</title>
+          <link
+            href={`${process.env.SITE_URL ?? ""}${asPath}`}
+            rel="canonical"
+          />
+        </Head>
+        <Nav />
+        <header className={styles.header}>
+          {home ? (
+            <h1 className={utilStyles.heading2Xl}>{name}</h1>
           ) : (
-            <div />
+            <h2 className={utilStyles.headingMd}>
+              <Link href="/">
+                <a className={utilStyles.colorInherit}>{name}</a>
+              </Link>
+            </h2>
           )}
+        </header>
+        <main>{children}</main>
+        {!home && (nextPage || prevPage) && (
+          <div className={styles.navigator}>
+            {prevPage ? (
+              <Link href={prevPage}>
+                <a>← Prev</a>
+              </Link>
+            ) : (
+              <div />
+            )}
 
-          {nextPage && (
-            <Link href={nextPage}>
-              <a>Next →</a>
+            {nextPage && (
+              <Link href={nextPage}>
+                <a>Next →</a>
+              </Link>
+            )}
+          </div>
+        )}
+
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>← Back to home</a>
             </Link>
-          )}
-        </div>
-      )}
-
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
-    </div>
-    <Footer />
-  </>
-);
+          </div>
+        )}
+      </div>
+      <Footer />
+    </>
+  );
+};

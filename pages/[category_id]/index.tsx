@@ -18,7 +18,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
   categoryId,
   meta,
 }) => (
-  <Layout title={meta.title}>
+  <Layout description={meta.description} title={meta.title}>
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h1 className={utilStyles.headingXl}>{meta.title}</h1>
       <h2 className={utilStyles.headingLg}>Sections</h2>

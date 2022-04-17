@@ -1,6 +1,7 @@
 {
   "title": "Trigonometry and Programming",
   "author": "Allan Legemaate",
+  "description": "Getting started with applications of trigonometry in programming.",
   "date": "2016-07-27",
   "postIds": ["distance", "distance-1d", "distance-2d", "distance-3d"]
 }

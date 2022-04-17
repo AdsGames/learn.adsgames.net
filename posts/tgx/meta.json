@@ -1,6 +1,7 @@
 {
   "title": "Loading TGX Files (Stronghold)",
   "author": "Allan Legemaate",
+  "description": "Deconstructing and loading the TGX image and animation format from the original Stronghold series.",
   "date": "2018-12-14",
   "postIds": ["loading"]
 }
