@@ -16,6 +16,7 @@
     "lint:types": "tsc --noEmit"
   },
   "dependencies": {
+    "@sentry/nextjs": "^7.12.1",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
     "highlight.js": "^11.5.0",
