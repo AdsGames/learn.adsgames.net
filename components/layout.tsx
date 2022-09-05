@@ -55,7 +55,7 @@ export const Layout: React.FC<LayoutProps> = ({
           )}
         </header>
         <main>{children}</main>
-        {!home && (nextPage || prevPage) && (
+        {!home && (Boolean(nextPage) || Boolean(prevPage)) && (
           <div className={styles.navigator}>
             {prevPage ? (
               <Link href={prevPage}>
@@ -65,11 +65,11 @@ export const Layout: React.FC<LayoutProps> = ({
               <div />
             )}
 
-            {nextPage && (
+            {nextPage ? (
               <Link href={nextPage}>
                 <a>Next →</a>
               </Link>
-            )}
+            ) : null}
           </div>
         )}
 
