@@ -9,6 +9,14 @@ const nextConfig = {
   sentry: {
     hideSourceMaps: true,
   },
+  redirects: async () => [
+    {
+      source: "/:path*",
+      destination: "https://adsgames.net/learn/:path*",
+      permanent: true,
+      basePath: false,
+    },
+  ],
 };
 
 module.exports = withSentryConfig(nextConfig, { silent: true });
