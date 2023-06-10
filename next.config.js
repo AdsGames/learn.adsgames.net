@@ -12,8 +12,9 @@ const nextConfig = {
   redirects: async () => [
     {
       source: "/:path*",
-      destination: "https://adsgames.net/learn/:path",
+      destination: "https://adsgames.net/learn/:path*",
       permanent: true,
+      basePath: false,
     },
   ],
 };
